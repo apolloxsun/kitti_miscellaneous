@@ -19,7 +19,7 @@ workspace directory
           └── sequences/
           └── fix_labels.py
 
-To be able to generate own visualization:
+To be able to generate your own visualization:
 Install one of the raw synced + rectified video
 create your own customized kitti folder and create sequences folder
 inside of the sequence folder have the same folder structure as the provided original folder structure by Semantic Kitti API 
