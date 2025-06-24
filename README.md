@@ -18,17 +18,30 @@ workspace directory
           └── semantic_kitti_api/
           └── sequences/
           └── fix_labels.py
+# Visualization and Labeling Instructions
 
-To be able to generate your own visualization:
--Install one of the raw synced + rectified video
--create your own customized kitti folder and create sequences folder
--inside of the sequence folder have the same folder structure as the provided original folder structure by Semantic Kitti API 
--and run the abovementioned visualize.py script accordingly
-Note that this process only visualizes the each scan with respect to timestamps
-To evaluate the scans with labeling this project focuses on using MATLAB's Lidar Labeler (currently)
-This process involves these steps: Please may procced with:
-Install MATLAB, then Lidar Labeler Toolbox
-Convert the velodyne .bin files to .pcd with the given convert_kitti_to_pcd.py
-Open the toolbox & upload the converted .pcd folder then start labeling using the toolbox interface
+## Visualization Steps
+
+To generate your own visualizations:
+
+1. **Install** one of the raw synced + rectified video sequences.
+2. **Create** a custom KITTI folder:
+   - Inside it, create a `sequences` directory.
+   - Follow the **same folder structure** as required by the SemanticKITTI API.
+3. **Run** the `visualize.py` script.
+
+> ⚠️ This process only visualizes scans based on timestamps — it does not include labeling.
+
+---
+
+## Labeling with MATLAB Lidar Labeler
+
+To evaluate and label scans using MATLAB:
+
+1. **Install** MATLAB and the **Lidar Labeler Toolbox**.
+2. **Convert** `.bin` files from the `velodyne` folder to `.pcd` using:
+   ```bash
+   python convert_kitti_to_pcd.py
+
 
 
