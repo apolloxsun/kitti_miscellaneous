@@ -63,9 +63,9 @@ def batch_convert_kitti_velodyne(input_bin_dir, output_pcd_dir):
 if __name__ == "__main__":
     # Define your input and output directories
     # This should be your 'velodyne_points/data/' folder
-    input_bin_directory = '/home/efepc/custom_kitti/sequences/05/velodyne' 
+    input_bin_directory = '/path/to/your/custom_kitti_data/sequences/05/velodyne' #for our case we used the provided 05th sequence 
     # This will be your new folder for PCDs, which you'll point MATLAB to
-    output_pcd_directory = '/home/efepc/custom_kitti/sequences/05/velodyne_pcd' 
+    output_pcd_directory = '/path/to/new/pcd/folder/' 
 
     # Run the batch conversion
     batch_convert_kitti_velodyne(input_bin_directory, output_pcd_directory)
