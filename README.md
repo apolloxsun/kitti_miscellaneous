@@ -26,8 +26,8 @@ The following folder structure is used for this project:
 │ │ ├── 000000.label   
 │ │ └── 000001.label  
 │ └── velodyne/  
-│ ├── 000000.bin  
-│ └── 000001.bin  
+│ │ ├── 000000.bin   
+│ │ └── 000001.bin  
 
 ---
 
