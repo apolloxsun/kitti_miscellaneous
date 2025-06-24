@@ -1,26 +1,6 @@
-direcory format we are using 
-/kitti/dataset/
-          └── sequences/
-                  ├── 00/
-                  │   ├── labels/
-                  │   │     ├ 000000.label
-                  │   │     └ 000001.label
-                  │   └── velodyne/
-                  │         ├ 000000.bin
-                  │         └ 000001.bin
+# KITTI Scan Visualization & Labeling Guide
 
-run 
-./visualize.py --sequence 00 --dataset /path/to/sequences (~/filecontainingsequences or /home (if sequences directly in home) may work directly)
-in the semantic-kitti-api directory
-
-workspace directory
-/home/name/semantic_kitti/
-          └── semantic_kitti_api/
-          └── sequences/
-          └── fix_labels.py
-# Visualization and Labeling Instructions
-
-## Visualization Steps
+## 📊 Visualization Steps
 
 To generate your own visualizations:
 
@@ -30,18 +10,44 @@ To generate your own visualizations:
    - Follow the **same folder structure** as required by the SemanticKITTI API.
 3. **Run** the `visualize.py` script.
 
-> ⚠️ This process only visualizes scans based on timestamps — it does not include labeling.
+> ⚠️ This process only enables to visualize scans based on timestamps — it does **not** include labeling.
 
 ---
 
-## Labeling with MATLAB Lidar Labeler
 
-To evaluate and label scans using MATLAB:
+## 📁 Directory Structure
 
-1. **Install** MATLAB and the **Lidar Labeler Toolbox**.
-2. **Convert** `.bin` files from the `velodyne` folder to `.pcd` using:
+The following folder structure is used for this project:
+
+/kitti/dataset/  
+└── sequences/  
+├── 00/  
+│ ├── labels/  
+│ │ ├── 000000.label   
+│ │ └── 000001.label  
+│ └── velodyne/  
+│ ├── 000000.bin  
+│ └── 000001.bin  
+
+---
+
+workspace directory  
+/home/name/semantic_kitti/  
+          └── semantic_kitti_api/  
+          └── sequences/  
+          └── fix_labels.py  
+          
+
+## 🏷️ Labeling Scans Using MATLAB Lidar Labeler
+
+To evaluate the scans with labeling, this project currently uses **MATLAB’s Lidar Labeler Toolbox**.
+
+Follow these steps:
+
+1. **Install** MATLAB.
+2. **Install** the **Lidar Labeler Toolbox** via MATLAB Add-Ons.
+3. **Convert** the Velodyne `.bin` files to `.pcd` format using the provided script:
    ```bash
    python convert_kitti_to_pcd.py
-
 
 
