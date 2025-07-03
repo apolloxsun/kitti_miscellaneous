@@ -31,7 +31,7 @@ The following folder structure is used for this project:
 
 ---
 
-workspace directory  
+## workspace directory  
 /home/name/semantic_kitti/  
           └── semantic_kitti_api/  
           └── sequences/  
